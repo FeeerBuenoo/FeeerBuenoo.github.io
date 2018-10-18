@@ -1,11 +1,12 @@
 body {
 	background-color: #92C5CA;
 	font-family: "Verdana", Helvetica, sans-serif;
+	text-align: center;
 }
 
 h1 {
 	font-size: 6vw;
-	background-color: #CAB492;
+	/*background-color: #CAB492;*/
 }
 
 h3 {
@@ -13,3 +14,39 @@ h3 {
 	font-size: 20px;
 }
 
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #404E57;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #5A99C0;
+}
+
+img.icono {
+	
+	width: 9%;
+}
+
+div.social-icons {
+	
+}
+
+imagen-perfil {
+	width: 50%;
+}
