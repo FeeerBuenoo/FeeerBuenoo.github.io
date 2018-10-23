@@ -4,6 +4,25 @@ body {
 	text-align: center;
 }
 
+.left {
+	float: left;
+	width: 50%;
+}
+
+.right {
+	float: right;
+	width: 50%;
+	text-align: justify;
+	font-size: 200%;
+	padding-right: -20%;
+}
+
+.social-icons {
+	text-align: center;
+	width: 100%;
+	
+}
+
 h1 {
 	font-size: 6vw;
 	/*background-color: #CAB492;*/
@@ -39,14 +58,15 @@ li a:hover {
 }
 
 img.icono {
-	
-	width: 9%;
-}
-
-div.social-icons {
-	
+	margin: 0 4px;
+	width: 5%;
 }
 
 imagen-perfil {
-	width: 50%;
+	width: 40%;
+}
+
+h2.seccion {
+	text-align: left;
+	fotn-size: 6vw;
 }
