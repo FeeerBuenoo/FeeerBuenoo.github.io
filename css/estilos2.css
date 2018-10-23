@@ -65,7 +65,8 @@ body {
 
 #contenido #secundario .social-icons .icon {
 	text-align: center;
-	width: 22%;
+	margin-right: 5px;
+	width: 15%;
 }
 
 #contenido #principal #skills .icon {
