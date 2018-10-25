@@ -2,6 +2,9 @@ body {
 	background-color: #92C5CA;
 	font-family: "Verdana", Helvetica, sans-serif;
 	text-align: justify;
+	background-image: url("../img/background.jpg");
+	background-size: auto;
+	background-position: 50% 29%;
 }
 
 #contenedor {
@@ -19,8 +22,7 @@ body {
 	border-radius: 10px;
 	padding: 2%;
 	background-image: url("../img/header.jpg");
-	background-size: cover;
-	position: relative;
+	background-position: 50% 29%;
 }
 
 #menu {
@@ -116,7 +118,6 @@ h2 {
 	border-radius: 10px;
 	padding-left: 2%;
 }
-
 
 #menu ul {
 	list-style-type: none;
