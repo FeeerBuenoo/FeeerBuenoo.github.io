@@ -2,9 +2,9 @@ body {
 	background-color: #92C5CA;
 	font-family: "Verdana", Helvetica, sans-serif;
 	text-align: justify;
-	background-image: url("../img/background.jpg");
-	background-size: auto;
-	background-position: 50% 29%;
+	background-image: url("../img/background2.jpg");
+	background-size: cover;
+	background-position: 35% 60%;
 }
 
 #contenedor {
@@ -15,6 +15,7 @@ body {
 	display: block;
 	padding: 20px;
 	margin: 0;
+	color: #DBDCC6;
 }
 
 #cabecera {
@@ -48,7 +49,7 @@ body {
 	text-align: justify;
 	width: 70%;
 	margin: auto;
-	margin-bottom: 50px;
+	margin-bottom: 2%;
 	margin-left: 25px;
 }
 
@@ -67,10 +68,10 @@ body {
 	background-color: #F2F2F2;
 	padding: 20px;
 	text-align: left;
-	width: 50%;
+	width: 51%;
 	margin: auto;
-	margin-top: 200px;
-	margin-bottom: 2%;
+	margin-top: 2%;
+	margin-bottom: 1%;
 }
 
 #contenido #secundario .imagen-perfil {
@@ -117,6 +118,7 @@ h2 {
 	background-color: #404E57;
 	border-radius: 10px;
 	padding-left: 2%;
+	color: #DBDCC6;
 }
 
 #menu ul {
