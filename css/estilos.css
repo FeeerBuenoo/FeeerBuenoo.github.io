@@ -2,9 +2,10 @@ body {
 	background-color: #92C5CA;
 	font-family: "Verdana", Helvetica, sans-serif;
 	text-align: justify;
-	background-image: url("../img/background2.jpg");
+	background-image: url("../img/background.jpg");
 	background-size: cover;
-	background-position: 35% 60%;
+	background-repeat: no-repeat;
+	background-position: 35%;
 }
 
 #contenedor {
