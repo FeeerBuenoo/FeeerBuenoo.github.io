@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="demo" ng-controller="AppController">
+  <head>
+    <title>Primera aplicación AngularJS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+  </head>
+  <body>
+    <h1>Hola {{name}}!</h1>
+    <form>
+      <h4>¿Cómo te llamas?</h4>
+      <input type="text" ng-model="name"/>
+      <h4>¿Cuáles son tus apellidos?</h4>
+      <input type="text" ng-model="apellidos"/>
+      <h4>¿Cuántos años tienes?</h4>
+      <input type="text" ng-model="edad"/>
+    </form>
+
+    <div class="contenedor">
+      <h1>Según los datos introducidos...</h1>
+      <h2>Nombre  ------> {{name}}</h2>
+      <h2>Apellidos  -----> {{apellidos}}</h2>
+      <h2>Edad  ----------> {{edad}}</h2>
+    </div>
+
+    <div class="enviarDato">
+      <input type="text" placeholder="Escriba algo..." ng-model='dato'/>
+      <input type="button" value="Resetear" ng-click="dato=''"/>
+
+      <input id="setbtn" type="button" value="Agrandar" ng-click="myVar='my-class'">
+      <input id="clearbtnb" type="button" value="Empequeñecer" ng-click="myVar=''">
+      <br />
+      <br />
+      <p class="base-class" ng-class="myVar">{{dato}}</p>
+    </div>
+
+    <div class="pensamientos" ng-app ng-init="pensamientos = [];">
+      <h1>Altavoz AngularJS</h1>
+      <p>
+        ¿Qué hay de nuevo? Escribe lo que se te pase por la cabeza...
+        <br />
+        <input type="text" ng-model="nuevoPensamiento" />
+        <input type="button" value="Agregar" ng-click="pensamientos.push(nuevoPensamiento); nuevoPensamiento = '';" />
+      </p>
+      <h2>Pensamientos que has tenido</h2>
+      <p ng-repeat="pensamiento in pensamientos" ng-init="paso = $index">
+        Pensaste esto: {{pensamiento}} (Iteración con índice {{paso+1}})
+      </p>
+    </div>
+
+    <div style="text-align: center" class="sorpresa">
+      <h3>Mostrar sorpresa<input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"></h3>
+      <br />
+      <div class="check-element animate-show-hide" ng-show="checked">
+        <h1>BOOOOMMMM!!!!! THE M POWEEERRRRR</h1>
+        <img src="img/sorpresa-bmw.jpg" />
+      </div>
+      <br />
+    </div>
+
+    <!--
+    <div class="listaCompra">
+      <script>
+      var app = angular.module("myShoppingList", []);
+      app.controller("myCtrl", function($scope) {
+          $scope.products = ["Milk", "Bread", "Cheese"];
+          $scope.addItem = function () {
+              $scope.errortext = "";
+              if (!$scope.addMe) {return;}
+              if ($scope.products.indexOf($scope.addMe) == -1) {
+                  $scope.products.push($scope.addMe);
+              } else {
+                  $scope.errortext = "The item is already in your shopping list.";
+              }
+          }
+          $scope.removeItem = function (x) {
+              $scope.errortext = "";
+              $scope.products.splice(x, 1);
+          }
+      });
+      </script>
+      <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+        <header class="w3-container w3-light-grey w3-padding-16">
+          <h3>My Shopping List</h3>
+        </header>
+        <ul class="w3-ul">
+          <li ng-repeat="x in products" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+        </ul>
+        <div class="w3-container w3-light-grey w3-padding-16">
+          <div class="w3-row w3-margin-top">
+            <div class="w3-col s10">
+              <input placeholder="Add shopping items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+            </div>
+            <div class="w3-col s2">
+              <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
+            </div>
+          </div>
+          <p class="w3-text-red">{{errortext}}</p>
+        </div>
+      </div>
+    </div>
+    -->
+
+
+  </body>
+</html>
