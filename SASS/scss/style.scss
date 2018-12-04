@@ -1,0 +1,101 @@
+$colorFondo: #3E86A2;
+$tamanioLetra: 200%;
+$tipoLetra: sans-serif;
+$colorLetra: #FFFFFF;
+$tipoFloat: left;
+$tipoClear: both;
+
+@mixin body {
+  background-color: $colorFondo;
+  font: $tamanioLetra $tipoLetra;
+}
+
+@mixin contenidoPrincipal {
+  font: {
+    family: $tipoLetra;
+    size: 20px;
+    weight: bold;
+  }
+  color: #ff0000;
+}
+
+@mixin contenidoSecundario {
+  font: {
+    family: $tipoLetra;
+    size: 20px;
+    weight: bold;
+  }
+  color: #ff0000;
+}
+
+@mixin contenidoPie {
+  font: {
+    family: $tipoLetra;
+  }
+}
+
+body {
+  @include body;
+}
+
+#contenido {
+  float: $tipoFloat;
+  width: 85%;
+}
+
+#contenido #cabecera {
+  font-size: ($tamanioLetra+50)/3;
+  color: hsl(0%, 0%, 10%);
+  @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+    #{$header} {
+      font-size: $size;
+    }
+  }
+}
+
+#contenido #principal {
+  float: $tipoFloat;
+  font-size: $tamanioLetra/3;
+  width: 80%;
+  h2 {
+    color: hsl(90%, 10%, 22%);
+  }
+  p {
+    color: $colorLetra;
+  }
+  @for $i from 1 through 3 {
+    .item-#{$i} { width: 2em * $i; }
+  }
+  @include contenidoPrincipal;
+}
+
+#contenido #secundario {
+  float: $tipoFloat;
+  font-size: $tamanioLetra/3;
+  width: 20%;
+  h2 {
+    color: hsl(90%, 10%, 22%);
+  }
+  p {
+    color: $colorLetra;
+  }
+  @for $p from 2 through 12{
+    .col-#{$p}{
+      width:100/$p+"%";
+    }
+
+  }
+  @include contenidoSecundario;
+}
+
+#pie {
+  clear: $tipoClear;
+  color: hsl(38%, 10%, 72%);
+  font-size: $tamanioLetra/7;
+  $i: 6;
+  @while $i > 0 {
+    .item-#{$i} { width: 2em * $i; }
+    $i: $i - 2;
+  }
+  @include contenidoPie;
+}
